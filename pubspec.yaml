@@ -1,16 +1,20 @@
 name: english_quiz_flutter
 description: A new Flutter project.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
+  flutter_screenutil: ^5.0.0+2
+  tokenizer:
+    git:
+      url: git@github.com:Tokenizer94/tokenizer_flutter_package.git
 
 dev_dependencies:
   flutter_test:

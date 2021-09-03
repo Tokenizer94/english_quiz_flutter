@@ -1,3 +1,7 @@
+tokenizer
+2.13
+file:///Users/admin/Library/flutter/.pub-cache/git/tokenizer_flutter_package-56515a3cc9482531b88e7fd60f4e07d6af340e42/
+file:///Users/admin/Library/flutter/.pub-cache/git/tokenizer_flutter_package-56515a3cc9482531b88e7fd60f4e07d6af340e42/lib/
 async
 2.12
 file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.6.1/
@@ -30,6 +34,10 @@ fake_async
 2.12
 file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/
 file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib/
+flutter_screenutil
+2.12
+file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/
+file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_screenutil-5.0.0+2/lib/
 matcher
 2.12
 file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/
