@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 
 import 'src/config/routes/app_routes.dart';
@@ -44,8 +45,9 @@ class MyApp extends StatelessWidget {
 
     return LocalizationProvider(
       state: LocalizationProvider.of(context).state,
-      child: MaterialApp(
-        localizationsDelegates: [
+      child: ScreenUtilInit(builder: () {
+        return MaterialApp(
+          localizationsDelegates: [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
@@ -53,10 +55,12 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: localizationDelegate.supportedLocales,
           locale: localizationDelegate.currentLocale,
-        debugShowCheckedModeBanner: false,
-        onGenerateRoute: AppRoutes.onGenerateRoutes,
-        theme: AppTheme.light,
-      ),
+          debugShowCheckedModeBanner: false,
+          onGenerateRoute: AppRoutes.onGenerateRoutes,
+          onGenerateInitialRoutes: AppRoutes.onGenerateInitialRoute,
+          theme: AppTheme.dark,
+        );
+      }),
     );
   }
 }

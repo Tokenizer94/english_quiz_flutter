@@ -2,6 +2,11 @@ import 'package:english_quiz_flutter/src/features/login/presentation/views/login
 import 'package:flutter/material.dart';
 
 class AppRoutes {
+
+  static List<Route<dynamic>> onGenerateInitialRoute(String initialRouteName){
+    return <Route>[_materialRoute(const LoginView())];
+  }
+
   static Route onGenerateRoutes(RouteSettings settings) {
     switch (settings.name) {
       case '/':
