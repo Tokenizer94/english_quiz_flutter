@@ -1,8 +1,11 @@
+import 'package:english_quiz_flutter/src/config/themes/app_theme.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_translate/flutter_translate.dart';
+
+import 'src/config/routes/app_routes.dart';
 
 late LocalizationDelegate delegate;
 
@@ -51,7 +54,8 @@ class MyApp extends StatelessWidget {
           supportedLocales: localizationDelegate.supportedLocales,
           locale: localizationDelegate.currentLocale,
         debugShowCheckedModeBanner: false,
-        home: Container(),
+        onGenerateRoute: AppRoutes.onGenerateRoutes,
+        theme: AppTheme.light,
       ),
     );
   }

@@ -24,3 +24,4 @@ analyzer:
     avoid_function_literals_in_foreach_calls: ignore
     prefer_final_locals: ignore
     prefer_final_fields: ignore
+    avoid_classes_with_only_static_members: ignore
