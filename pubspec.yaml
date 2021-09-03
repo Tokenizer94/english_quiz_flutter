@@ -18,9 +18,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_screenutil: ^5.0.0+2
+  flutter_translate: ^3.0.1
   fluttertoast: ^8.0.8
   get_it: ^7.2.0
-  intl: ^0.17.0
   retrofit: ^2.0.1
   supercharged: ^2.0.0
   tokenizer:
@@ -41,3 +41,4 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/i18n/

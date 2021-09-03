@@ -1,10 +1,19 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_translate/flutter_translate.dart';
+
+late LocalizationDelegate delegate;
 
 Future<void> main() async {
   await startupSetup();
-  runApp(MyApp());
+  runApp(
+    LocalizedApp(
+      delegate,
+      MyApp(),
+    ),
+  );
 }
 
 Future<void> startupSetup() async {
@@ -19,14 +28,31 @@ Future<void> startupSetup() async {
       ),
     );
   }
+  delegate = await LocalizationDelegate.create(
+    fallbackLocale: 'fa',
+    supportedLocales: ['fa'],
+  );
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Container(),
+    LocalizationDelegate localizationDelegate = LocalizedApp.of(context).delegate;
+
+    return LocalizationProvider(
+      state: LocalizationProvider.of(context).state,
+      child: MaterialApp(
+        localizationsDelegates: [
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            localizationDelegate,
+          ],
+          supportedLocales: localizationDelegate.supportedLocales,
+          locale: localizationDelegate.currentLocale,
+        debugShowCheckedModeBanner: false,
+        home: Container(),
+      ),
     );
   }
 }
