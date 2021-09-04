@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tokenizer/tokenizer.dart' as tokenizer;
+
 class AppTheme {
   static ThemeData get light {
     return ThemeData(
@@ -21,9 +22,9 @@ class AppTheme {
         elevation: 0,
         color: Colors.black,
       ),
-      scaffoldBackgroundColor: Colors.grey.shade700,
+      scaffoldBackgroundColor: Colors.grey.shade900,
       primaryColor: Colors.deepPurpleAccent,
-      accentColor: Colors.lightGreen.shade800,
+      accentColor: Colors.lightGreen.shade900,
       splashColor: Colors.transparent,
       fontFamily: tokenizer.wyekanFontName,
     );

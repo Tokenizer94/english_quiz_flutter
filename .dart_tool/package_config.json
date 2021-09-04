@@ -326,6 +326,12 @@
       "languageVersion": "2.13"
     },
     {
+      "name": "loading_animations",
+      "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/loading_animations-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "logging",
       "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.1",
       "packageUri": "lib/",
@@ -346,6 +352,12 @@
     {
       "name": "mime",
       "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/mime-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "ndialog",
+      "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/ndialog-4.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -584,7 +596,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-03T06:57:42.901683Z",
+  "generated": "2021-09-04T20:06:15.092534Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }

@@ -1,0 +1,75 @@
+Date : 2021-09-05 00:25:24
+Directory : /Users/admin/Projects/english_quiz_flutter/lib
+Total : 25 files,  651 codes, 11 comments, 116 blanks, all 778 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         25 |        651 |         11 |        116 |        778 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                       | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                          |         25 |        651 |         11 |        116 |        778 |
+| src                                                                                                                        |         24 |        591 |         11 |        109 |        711 |
+| src/config                                                                                                                 |          2 |         56 |          0 |          8 |         64 |
+| src/config/routes                                                                                                          |          1 |         26 |          0 |          5 |         31 |
+| src/config/themes                                                                                                          |          1 |         30 |          0 |          3 |         33 |
+| src/core                                                                                                                   |          7 |         66 |          0 |         19 |         85 |
+| src/core/bloc                                                                                                              |          1 |         17 |          0 |          5 |         22 |
+| src/core/params                                                                                                            |          1 |          6 |          0 |          2 |          8 |
+| src/core/resources                                                                                                         |          1 |         12 |          0 |          5 |         17 |
+| src/core/usecases                                                                                                          |          1 |          3 |          0 |          0 |          3 |
+| src/core/utils                                                                                                             |          3 |         28 |          0 |          7 |         35 |
+| src/features                                                                                                               |         14 |        457 |          7 |         76 |        540 |
+| src/features/authentication                                                                                                |         14 |        457 |          7 |         76 |        540 |
+| src/features/authentication/data                                                                                           |          5 |        118 |          4 |         29 |        151 |
+| src/features/authentication/data/datasources                                                                               |          2 |         49 |          4 |         12 |         65 |
+| src/features/authentication/data/datasources/remote                                                                        |          2 |         49 |          4 |         12 |         65 |
+| src/features/authentication/data/models                                                                                    |          2 |         37 |          0 |         11 |         48 |
+| src/features/authentication/data/repositories                                                                              |          1 |         32 |          0 |          6 |         38 |
+| src/features/authentication/domain                                                                                         |          3 |         30 |          1 |          9 |         40 |
+| src/features/authentication/domain/entities                                                                                |          1 |         11 |          0 |          4 |         15 |
+| src/features/authentication/domain/repositories                                                                            |          1 |          6 |          1 |          1 |          8 |
+| src/features/authentication/domain/usecases                                                                                |          1 |         13 |          0 |          4 |         17 |
+| src/features/authentication/presentation                                                                                   |          6 |        309 |          2 |         38 |        349 |
+| src/features/authentication/presentation/blocs                                                                             |          3 |         57 |          0 |         19 |         76 |
+| src/features/authentication/presentation/blocs/auth                                                                        |          3 |         57 |          0 |         19 |         76 |
+| src/features/authentication/presentation/views                                                                             |          1 |        195 |          0 |         11 |        206 |
+| src/features/authentication/presentation/widgets                                                                           |          2 |         57 |          2 |          8 |         67 |
++----------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                   | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/admin/Projects/english_quiz_flutter/lib/main.dart                                                                   | Dart     |         60 |          0 |          7 |         67 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/config/routes/app_routes.dart                                           | Dart     |         26 |          0 |          5 |         31 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/config/themes/app_theme.dart                                            | Dart     |         30 |          0 |          3 |         33 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/bloc/bloc_with_state.dart                                          | Dart     |         17 |          0 |          5 |         22 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/params/auth_request.dart                                           | Dart     |          6 |          0 |          2 |          8 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/resources/data_state.dart                                          | Dart     |         12 |          0 |          5 |         17 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/usecases/usecase.dart                                              | Dart     |          3 |          0 |          0 |          3 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/utils/colors.dart                                                  | Dart     |          2 |          0 |          2 |          4 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/utils/constants.dart                                               | Dart     |          3 |          0 |          1 |          4 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/core/utils/helper.dart                                                  | Dart     |         23 |          0 |          4 |         27 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/data/datasources/remote/auth_api_service.dart   | Dart     |         13 |          0 |          4 |         17 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/data/datasources/remote/auth_api_service.g.dart | Dart     |         36 |          4 |          8 |         48 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/data/models/auth_model.dart                     | Dart     |         17 |          0 |          5 |         22 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/data/models/auth_response_model.dart            | Dart     |         20 |          0 |          6 |         26 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/data/repositories/auth_repository_impl.dart     | Dart     |         32 |          0 |          6 |         38 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/domain/entities/auth.dart                       | Dart     |         11 |          0 |          4 |         15 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/domain/repositories/auth_repository.dart        | Dart     |          6 |          1 |          1 |          8 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/domain/usecases/request_send_sms_usecase.dart   | Dart     |         13 |          0 |          4 |         17 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/blocs/auth/auth_bloc.dart          | Dart     |         30 |          0 |          7 |         37 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/blocs/auth/auth_event.dart         | Dart     |         10 |          0 |          4 |         14 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/blocs/auth/auth_state.dart         | Dart     |         17 |          0 |          8 |         25 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/views/login_view.dart              | Dart     |        195 |          0 |         11 |        206 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/widgets/mybackground_widget.dart   | Dart     |         15 |          0 |          4 |         19 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/features/authentication/presentation/widgets/mybutton_widget.dart       | Dart     |         42 |          2 |          4 |         48 |
+| /Users/admin/Projects/english_quiz_flutter/lib/src/injector.dart                                                           | Dart     |         12 |          4 |          6 |         22 |
+| Total                                                                                                                      |          |        651 |         11 |        116 |        778 |
++----------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
