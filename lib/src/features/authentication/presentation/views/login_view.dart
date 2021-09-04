@@ -62,7 +62,10 @@ class LoginMobileView extends HookWidget {
           },
           listener: (context, state) {
             if (state is AuthSuccess) {
-              Navigator.popAndPushNamed(context, '/verifyCode');
+              Navigator.popAndPushNamed(context, '/verifyCode', arguments: <String, String>{
+                "fullname": _fullName,
+                "phoneNumber": _phoneNumber,
+              });
             }
           },
         ),

@@ -8,7 +8,6 @@ import 'package:english_quiz_flutter/src/core/utils/helper.dart';
 import 'package:english_quiz_flutter/src/features/authentication/domain/entities/auth.dart';
 import 'package:english_quiz_flutter/src/features/authentication/domain/usecases/request_send_sms_usecase.dart';
 import 'package:equatable/equatable.dart';
-import 'package:supercharged/supercharged.dart';
 import 'package:flutter/material.dart';
 
 part 'auth_event.dart';
