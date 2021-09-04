@@ -1,4 +1,4 @@
-import 'package:english_quiz_flutter/src/features/login/presentation/views/login_view.dart';
+import 'package:english_quiz_flutter/src/features/authentication/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
