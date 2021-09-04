@@ -4,5 +4,5 @@ import 'package:english_quiz_flutter/src/features/authentication/domain/entities
 
 abstract class AuthRepository{
   //? API methods
-  Future<DataState<Auth>> requestSendSMS(AuthRequestParams params);
+  Future<DataState<Auth>> requestSendAuthSMS(AuthRequestParams params);
 }

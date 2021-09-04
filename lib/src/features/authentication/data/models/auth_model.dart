@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:english_quiz_flutter/src/features/authentication/domain/entities/auth.dart';
 
 class AuthModel extends Auth {
@@ -9,13 +7,7 @@ class AuthModel extends Auth {
           result: result,
         );
 
-  factory AuthModel.fromMap(Map<String, dynamic> map) {
-    return AuthModel(
-      result: map['result'] as String,
-    );
-  }
-
-  factory AuthModel.fromJson(String source) => AuthModel.fromMap(
-        json.decode(source) as Map<String, dynamic>,
+  factory AuthModel.fromJson(Map<String, dynamic> map) => AuthModel(
+        result: map['result'] as String,
       );
 }

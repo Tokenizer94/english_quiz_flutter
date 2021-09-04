@@ -16,11 +16,11 @@ class _AuthApiService implements AuthApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<AuthResponseModel>> requestSendSMS(
+  Future<HttpResponse<AuthResponseModel>> requestSendAuthSMS(
       {required phoneNumber}) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{r'phone_number': phoneNumber};
-    final _data = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _data = {'phone_number': phoneNumber};
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<HttpResponse<AuthResponseModel>>(
             Options(method: 'POST', headers: <String, dynamic>{}, extra: _extra)

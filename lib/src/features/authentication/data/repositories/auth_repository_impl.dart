@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -14,9 +13,9 @@ class AuthRepositoryImpl implements AuthRepository {
   const AuthRepositoryImpl(this._authApiService);
 
   @override
-  Future<DataState<Auth>> requestSendSMS(AuthRequestParams params) async {
+  Future<DataState<Auth>> requestSendAuthSMS(AuthRequestParams params) async {
     try {
-      final httpResponse = await _authApiService.requestSendSMS(
+      final httpResponse = await _authApiService.requestSendAuthSMS(
         phoneNumber: params.phoneNumber,
       );
       if (httpResponse.response.statusCode == HttpStatus.ok) {
