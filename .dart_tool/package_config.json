@@ -332,6 +332,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "logger",
+      "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/logger-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "logging",
       "rootUri": "file:///Users/admin/Library/flutter/.pub-cache/hosted/pub.dartlang.org/logging-1.0.1",
       "packageUri": "lib/",
@@ -596,7 +602,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-04T20:06:15.092534Z",
+  "generated": "2021-09-05T05:25:20.960416Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
