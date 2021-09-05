@@ -16,7 +16,7 @@ abstract class AuthApiService {
   });
 
   @POST('/veriy_code')
-  Future<HttpResponse<UserInfoResponseModel>> requestLogin({
+  Future<HttpResponse<UserInfoResponseModel>> getUserInfo({
     @Field('fullname') required String fullname,
     @Field('phone_number') required String phoneNumber,
     @Field('verify_code') required String verifyCode,

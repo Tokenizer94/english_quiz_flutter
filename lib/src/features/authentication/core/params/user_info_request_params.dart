@@ -1,8 +1,8 @@
-class LoginRequestParams {
+class UserInfoRequestParams {
   final String fullname;
   final String phoneNumber;
   final String verifyCode;
-  LoginRequestParams({
+  UserInfoRequestParams({
     required this.fullname,
     required this.phoneNumber,
     required this.verifyCode,

@@ -15,21 +15,22 @@ part 'auth_state.dart';
 
 class AuthBloc extends BlocWithState<AuthEvent, AuthState> {
   final SendAuthSMSUseCase _sendAuthSMSUseCase;
-  AuthBloc(this._sendAuthSMSUseCase) : super(const AuthInitial());
+  AuthBloc(this._sendAuthSMSUseCase) : super(AuthInitial());
 
   @override
   Stream<AuthState> mapEventToState(AuthEvent event) async* {
     if (event is SendAuthSMS) yield* _requestSendAuthSMS(event);
   }
 
-  Stream<AuthState> _requestSendAuthSMS(AuthEvent event) async* {
+  Stream<AuthState> _requestSendAuthSMS(SendAuthSMS event) async* {
     yield* runBlocProcess(() async* {
-      yield const AuthLoading();
+      yield AuthLoading();
       final dataState = await _sendAuthSMSUseCase(params: AuthRequestParams(phoneNumber: event.phoneNumber));
 
       if (dataState is DataSuccess && dataState.data!.result.isNotEmpty) {
         final Auth auth = dataState.data!;
         MyToast myToast = const MyToast();
+        //ToDo: Show proper message
         myToast(
           message: auth.result.toString(),
           toastColor: Colors.lightGreen,

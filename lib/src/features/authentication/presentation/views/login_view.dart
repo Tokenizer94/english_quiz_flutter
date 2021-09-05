@@ -209,6 +209,6 @@ class LoginMobileView extends HookWidget {
       return;
     }
     _formKey.currentState!.save();
-    mContext.read<AuthBloc>().add(SendAuthSMS(_phoneNumberTEC.text));
+    mContext.read<AuthBloc>().add(SendAuthSMS(phoneNumber: _phoneNumberTEC.text));
   }
 }

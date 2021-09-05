@@ -1,18 +1,16 @@
 part of 'auth_bloc.dart';
 
 abstract class AuthEvent extends Equatable {
-  final String phoneNumber;
-  const AuthEvent({
-    required this.phoneNumber,
-  });
+  const AuthEvent();
 
   @override
-  List<Object> get props => [phoneNumber];
+  List<Object> get props => [];
 }
 
 class SendAuthSMS extends AuthEvent {
-  const SendAuthSMS(String phoneNumber)
-      : super(
-          phoneNumber: phoneNumber,
-        );
+  final String phoneNumber;
+  const SendAuthSMS({required this.phoneNumber});
+
+  @override
+  List<Object> get props => [phoneNumber];
 }

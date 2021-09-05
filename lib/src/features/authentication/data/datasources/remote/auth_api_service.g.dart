@@ -33,7 +33,7 @@ class _AuthApiService implements AuthApiService {
   }
 
   @override
-  Future<HttpResponse<UserInfoResponseModel>> requestLogin(
+  Future<HttpResponse<UserInfoResponseModel>> getUserInfo(
       {required fullname, required phoneNumber, required verifyCode}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
