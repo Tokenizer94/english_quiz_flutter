@@ -4,8 +4,11 @@ import 'package:english_quiz_flutter/src/features/authentication/core/params/use
 import 'package:english_quiz_flutter/src/features/authentication/domain/entities/auth.dart';
 import 'package:english_quiz_flutter/src/features/authentication/domain/entities/user_info.dart';
 
-abstract class AuthRepository{
+abstract class AuthRepository {
   //? API methods
   Future<DataState<Auth>> requestSendAuthSMS(AuthRequestParams params);
   Future<DataState<UserInfo>> getUserInfo(UserInfoRequestParams params);
+
+  //? Database methods
+  Future<void> saveUserInfo(UserInfo userInfo);
 }

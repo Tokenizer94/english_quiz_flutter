@@ -1,3 +1,4 @@
+import 'package:english_quiz_flutter/src/features/authentication/presentation/views/home_view.dart';
 import 'package:english_quiz_flutter/src/features/authentication/presentation/views/login_view.dart';
 import 'package:english_quiz_flutter/src/features/authentication/presentation/views/verify_code.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ class AppRoutes {
         return _materialRoute(const LoginView());
       case '/verifyCode':
         return _materialRoute(const VerifyCodeView());
+      case '/home':
+        return _materialRoute(const HomeView());
       default:
         return null;
     }

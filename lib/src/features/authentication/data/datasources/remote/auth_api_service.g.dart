@@ -45,7 +45,7 @@ class _AuthApiService implements AuthApiService {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<HttpResponse<UserInfoResponseModel>>(
             Options(method: 'POST', headers: <String, dynamic>{}, extra: _extra)
-                .compose(_dio.options, '/veriy_code',
+                .compose(_dio.options, '/verify_code',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = UserInfoResponseModel.fromJson(_result.data!);

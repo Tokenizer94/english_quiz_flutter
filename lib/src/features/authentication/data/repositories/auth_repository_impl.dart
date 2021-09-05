@@ -1,8 +1,9 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:english_quiz_flutter/src/features/authentication/core/params/auth_request_params.dart';
+import 'package:english_quiz_flutter/src/core/datasources/local/app_database.dart';
 import 'package:english_quiz_flutter/src/core/resources/data_state.dart';
+import 'package:english_quiz_flutter/src/features/authentication/core/params/auth_request_params.dart';
 import 'package:english_quiz_flutter/src/features/authentication/core/params/user_info_request_params.dart';
 import 'package:english_quiz_flutter/src/features/authentication/data/datasources/remote/auth_api_service.dart';
 import 'package:english_quiz_flutter/src/features/authentication/domain/entities/auth.dart';
@@ -11,8 +12,9 @@ import 'package:english_quiz_flutter/src/features/authentication/domain/reposito
 
 class AuthRepositoryImpl implements AuthRepository {
   final AuthApiService _authApiService;
+  final AppDatabase _appDatabase;
 
-  const AuthRepositoryImpl(this._authApiService);
+  const AuthRepositoryImpl(this._authApiService, this._appDatabase);
 
   @override
   Future<DataState<Auth>> requestSendAuthSMS(AuthRequestParams params) async {
@@ -59,4 +61,10 @@ class AuthRepositoryImpl implements AuthRepository {
       return DataFailed(e);
     }
   }
+
+  @override
+  Future<void> saveUserInfo(UserInfo userInfo) async {
+    return _appDatabase.userInfoDao.insertUserInfo(userInfo);
+  }
+
 }

@@ -9,7 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_translate/flutter_translate.dart';
 import 'package:tokenizer/tokenizer.dart';
 
-class LoginView extends HookWidget {
+class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
 
   @override
@@ -209,6 +209,11 @@ class LoginMobileView extends HookWidget {
       return;
     }
     _formKey.currentState!.save();
-    mContext.read<AuthBloc>().add(SendAuthSMS(phoneNumber: _phoneNumberTEC.text));
+    mContext.read<AuthBloc>().add(
+          SendAuthSMS(
+            fullname: _fullnameTEC.text,
+            phoneNumber: _phoneNumberTEC.text,
+          ),
+        );
   }
 }

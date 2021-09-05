@@ -9,6 +9,7 @@ import 'package:english_quiz_flutter/src/features/authentication/domain/entities
 import 'package:english_quiz_flutter/src/features/authentication/domain/usecases/get_user_info_usecase.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 part 'user_info_event.dart';
 part 'user_info_state.dart';
@@ -16,6 +17,8 @@ part 'user_info_state.dart';
 class UserInfoBloc extends BlocWithState<UserInfoEvent, UserInfoState> {
   final GetUserInfoUseCase _getUserInfoUseCase;
   UserInfoBloc(this._getUserInfoUseCase) : super(UserInfoInitial());
+
+  Logger logger = Logger();
 
   @override
   Stream<UserInfoState> mapEventToState(
@@ -54,6 +57,7 @@ class UserInfoBloc extends BlocWithState<UserInfoEvent, UserInfoState> {
           message: dataState.error?.response.toString() ?? 'Unhandled Exception',
           toastColor: Colors.pink,
         );
+        logger.d(dataState.error?.response.toString());
         yield UserInfoError(dataState.error!);
       }
     });

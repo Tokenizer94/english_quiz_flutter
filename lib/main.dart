@@ -1,5 +1,7 @@
 import 'package:english_quiz_flutter/src/config/themes/app_theme.dart';
 import 'package:english_quiz_flutter/src/features/authentication/presentation/blocs/auth/auth_bloc.dart';
+import 'package:english_quiz_flutter/src/features/authentication/presentation/blocs/local_user_info/local_user_info_bloc.dart';
+import 'package:english_quiz_flutter/src/features/authentication/presentation/blocs/user_info/user_info_bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -54,6 +56,12 @@ class MyApp extends StatelessWidget {
           return MultiBlocProvider(
             providers: [
               BlocProvider<AuthBloc>(
+                create: (_) => injector(),
+              ),
+              BlocProvider<UserInfoBloc>(
+                create: (_) => injector(),
+              ),
+              BlocProvider<LocalUserInfoBloc>(
                 create: (_) => injector(),
               ),
             ],

@@ -13,7 +13,13 @@ class AuthLoading extends AuthState {}
 
 class AuthSuccess extends AuthState {
   final Auth auth;
-  const AuthSuccess(this.auth);
+  final String fullname;
+  final String phoneNumber;
+  const AuthSuccess({
+    required this.auth,
+    required this.fullname,
+    required this.phoneNumber,
+  });
 
   @override
   List<Object> get props => [auth];

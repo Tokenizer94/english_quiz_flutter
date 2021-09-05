@@ -3,14 +3,17 @@
   "login_page" : "صفحه ورود",
   "full_name" : "نام کامل",
   "continue" : "ادامه",
+  "login" : "ورود",
   "phone_number" : "شماره همراه",
   "loading": "در حال بارگذاری",
+  "verify_code":"کد تایید",
   "desc":{
     "login_desc":"جهت ورود نام و شماره موبایل خود را وارد نمایید"
   },
   "validation":{
     "required":"الزامی*",
     "3_char":"حداقل ۳ کاراکتر",
+    "5_char":"حداقل ۵ کاراکتر",
     "wrong_phone":"شماره اشتباه"
   }
 }

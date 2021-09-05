@@ -8,9 +8,10 @@ abstract class AuthEvent extends Equatable {
 }
 
 class SendAuthSMS extends AuthEvent {
+  final String fullname;
   final String phoneNumber;
-  const SendAuthSMS({required this.phoneNumber});
+  const SendAuthSMS({ required this.fullname,required this.phoneNumber});
 
   @override
-  List<Object> get props => [phoneNumber];
+  List<Object> get props => [fullname, phoneNumber];
 }

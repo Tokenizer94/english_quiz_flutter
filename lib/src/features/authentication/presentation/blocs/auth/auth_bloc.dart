@@ -9,6 +9,7 @@ import 'package:english_quiz_flutter/src/features/authentication/domain/entities
 import 'package:english_quiz_flutter/src/features/authentication/domain/usecases/request_send_sms_usecase.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:logger/logger.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
@@ -16,6 +17,8 @@ part 'auth_state.dart';
 class AuthBloc extends BlocWithState<AuthEvent, AuthState> {
   final SendAuthSMSUseCase _sendAuthSMSUseCase;
   AuthBloc(this._sendAuthSMSUseCase) : super(AuthInitial());
+
+  Logger logger = Logger();
 
   @override
   Stream<AuthState> mapEventToState(AuthEvent event) async* {
@@ -35,7 +38,11 @@ class AuthBloc extends BlocWithState<AuthEvent, AuthState> {
           message: auth.result.toString(),
           toastColor: Colors.lightGreen,
         );
-        yield AuthSuccess(auth);
+        yield AuthSuccess(
+          auth: auth,
+          fullname: event.fullname,
+          phoneNumber: event.phoneNumber,
+        );
       }
       if (dataState is DataFailed) {
         MyToast myToast = const MyToast();
@@ -44,6 +51,7 @@ class AuthBloc extends BlocWithState<AuthEvent, AuthState> {
           message: dataState.error?.response.toString() ?? 'Unhandled Exception',
           toastColor: Colors.pink,
         );
+        logger.d(dataState.error?.response.toString());
         yield AuthError(dataState.error!);
       }
     });

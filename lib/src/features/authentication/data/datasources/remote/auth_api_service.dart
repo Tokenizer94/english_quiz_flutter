@@ -10,12 +10,14 @@ part 'auth_api_service.g.dart';
 abstract class AuthApiService {
   factory AuthApiService(Dio dio, {String baseUrl}) = _AuthApiService;
 
+//ToDo: Add full name to mock API and here
+//ToDo: Make verifyCode static in mock and test error condition
   @POST('/otp_login')
   Future<HttpResponse<AuthResponseModel>> requestSendAuthSMS({
     @Field('phone_number') required String phoneNumber,
   });
 
-  @POST('/veriy_code')
+  @POST('/verify_code')
   Future<HttpResponse<UserInfoResponseModel>> getUserInfo({
     @Field('fullname') required String fullname,
     @Field('phone_number') required String phoneNumber,
